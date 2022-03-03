@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+body {
+	background: 
+radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 22%, #373737 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 60% 22%, #373737 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 50% 35%, #373737 30%, rgba(221,51,85,0) 31%),
+
+radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 22%, #3c3c3c 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 60% 22%, #3c3c3c 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 50% 35%, #3c3c3c 30%, rgba(221,51,85,0) 31%) 50px 50px;
+	background-color:#323232;
+	background-size:100px 100px;
+	font-family: 'Syne Mono', monospace;
+}
+
+/*
+Valentine's Pen
+---- */
+
+.centered {
+	width: 100%;
+	margin: 30vh auto;
+	text-align: center;
+}
+
+.centered h4 {
+	color: #FFFFFF;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+/*
+Buttoms
+-----*/
+
+.glow-on-hover {
+    width: 120px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
